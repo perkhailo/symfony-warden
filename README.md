@@ -1,4 +1,4 @@
-## Ready Docker Warden environment for a Symfony Developer with Postgres
+## Ready Docker Warden environment for a Symfony with Postgres
 <p align="center">
     <img alt="PHP 8" src="https://img.shields.io/badge/PHP-8.x-8892BF?style=for-the-badge&logo=php">
     <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-15.x-336791?style=for-the-badge&logo=postgresql&logoColor=white">
