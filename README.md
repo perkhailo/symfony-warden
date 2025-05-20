@@ -10,7 +10,6 @@
 - Docker Compose 2.23.3+: https://docs.docker.com/compose/install/
 - Ubuntu 22.04: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 - Install Warden: https://docs.warden.dev/
-- Run `git clone https://github.com/perkhailo/symfony-warden` to clone the environment files to a separate folder and `cd` to the `app` folder.
 - Check and update the `.env` file if needed. Additionally, can specify version of the services if need, e.g. `PHP_VERSION` or other.
 - Run `warden env up` to get the environment up and run.
 - Run `warden sign-certificate TRAEFIK_DOMAIN` use `TRAEFIK_DOMAIN` from `.env` file.
