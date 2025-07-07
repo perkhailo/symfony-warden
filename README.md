@@ -1,8 +1,7 @@
-## Ready Docker Warden environment for a Symfony with Postgres
+## Docker Warden environment for a Symfony
 <p align="center">
-    <img alt="PHP 8" src="https://img.shields.io/badge/PHP-8.x-8892BF?style=for-the-badge&logo=php">
+    <img alt="PHP 8+" src="https://img.shields.io/badge/PHP-8.x-8892BF?style=for-the-badge&logo=php">
     <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-16.x-336791?style=for-the-badge&logo=postgresql&logoColor=white">
-    <img alt="Redis" src="https://img.shields.io/badge/Redis-6.x-a51f17?style=for-the-badge&logo=redis&logoColor=white">
 </p>
 
 ### Installation
