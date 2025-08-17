@@ -25,21 +25,6 @@ services:
       - NGINX_PUBLIC=/public
     depends_on:
       - php-fpm
-
-  php-fpm:
-    hostname: "${WARDEN_ENV_NAME}-php-fpm"
-    image: ${WARDEN_IMAGE_REPOSITORY}/php-fpm-indev:${PHP_VERSION}
-    environment:
-      - TRAEFIK_DOMAIN
-      - TRAEFIK_SUBDOMAIN
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK_PATH_ENV:-/tmp/ssh-auth.sock}
-      - NODE_VERSION=${NODE_VERSION}
-      - COMPOSER_VERSION=${COMPOSER_VERSION}
-      - COMPOSER_MEMORY_LIMIT=-1
-    volumes: *volumes
-    extra_hosts: *extra_hosts
-    depends_on:
-    - db
   
   php-debug:
     hostname: "${WARDEN_ENV_NAME}-php-debug"
@@ -56,6 +41,21 @@ services:
     extra_hosts: *extra_hosts
     depends_on:
       - php-fpm
+
+  php-fpm:
+    hostname: "${WARDEN_ENV_NAME}-php-fpm"
+    image: ${WARDEN_IMAGE_REPOSITORY}/php-fpm-indev:${PHP_VERSION}
+    environment:
+      - TRAEFIK_DOMAIN
+      - TRAEFIK_SUBDOMAIN
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK_PATH_ENV:-/tmp/ssh-auth.sock}
+      - NODE_VERSION=${NODE_VERSION}
+      - COMPOSER_VERSION=${COMPOSER_VERSION}
+      - COMPOSER_MEMORY_LIMIT=-1
+    volumes: *volumes
+    extra_hosts: *extra_hosts
+    depends_on:
+      - db
       
   db:
     hostname: "${WARDEN_ENV_NAME}-postgres"
